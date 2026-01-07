@@ -1,0 +1,47 @@
+{
+    "app": {
+        "port": 5178,
+        "env": "test",
+        "authHeader": "Basic V0lOLVZaV05FVFxTLWlvcDp3b1JEMjk1IQ==",
+        "userServiceRefreshInterval" : 30000
+    },
+"rcmService" : {
+        "url" : "http://localhost:8080/rcmengine/"
+    },
+    "dbService" : {
+        "url" : "http://localhost:8080/db/"
+    },
+    "userService" : {
+        "url" : "http://localhost:8080/user/"
+    },
+    "emisService":{
+        "url":"http://localhost:8080/emis/"
+    },
+    "opsDecom": false,
+    "opsTrackerService": {       
+      "pmTaskUpdateUrl" : "http://txslpmtkpa5v.nss.vzwnet.com/c2/API/vzw/putPMActual.php"
+  },
+    "iopdbConfig": {
+        "poolMin" : 10,
+        "poolMax" : 10,
+        "poolIncrement" : 1,
+        "poolTimeout" : 120000,
+        "queueTimeout": 0,
+        "stmtCacheSize": 60000,
+        "name" : "iopdb",
+        "env" : "dev",
+        "mode" : "rac",
+        "instance" : "service",
+        "serviceName" : "svc_iop_app_high_02",
+        "filePath": "/usr/apps/iop/db_details/db_credentials_dev.json"
+      },
+    "log": {
+        "directory": "/usr/apps/iop/apps/logs",
+        "baseFileName": "iop-pm-service",
+        "levels": ["debug", "info", "error"]
+    },
+    "cache": {
+    "url": "http://localhost:8080/cache/",
+    "enabled": true
+  }
+}
